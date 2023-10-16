@@ -23,6 +23,7 @@ class LudoBoard(context: Context?, attributeSet: AttributeSet?) : View(context, 
         height = h
         shift = (height - width) / 2f
         p = width / 15
+
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -227,10 +228,7 @@ class LudoBoard(context: Context?, attributeSet: AttributeSet?) : View(context, 
             val x = p * pair.x - 1
             val y = shift + p * pair.y - 5
 
-            GlobalScope.launch {
-                canvas.drawBitmap(bitmap, p * pair.x, shift + p * pair.y, paint)
-                delay(100)
-            }
+
 
         }
     }
